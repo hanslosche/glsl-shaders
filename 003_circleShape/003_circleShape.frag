@@ -11,11 +11,9 @@ float circleShape(vec2 position, float radius){
 void main(){
     vec2 position = gl_FragCoord.xy / u_resolution;
 
-    vec3 tempColor = vec3(0.5, 0.0, 0.0);
-
     float circle = circleShape(position, 0.2);
 
-    vec3 color = vec3( 1 - circle) * (tempColor);
+    vec3 color = vec3( 1 - circle);
 
     gl_FragColor = vec4(color, 1.0);
 }
